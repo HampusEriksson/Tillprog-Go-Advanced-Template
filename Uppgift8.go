@@ -2,7 +2,7 @@
 // Datum
 /*
 Din uppgift är att skriva en klient som samtidigt frågar alla servrar och avslutar sökningen så snart en har svarat med en korrekt temperatur.
-Förfrågan ska också avslutas om ingen har svarat inom en given tid. Filen client.go innehåller en mall som du ska bygga vidare på.
+Förfrågan ska också avslutas om ingen har svarat inom en given tid (t.ex. 15 sekunder).
 
 Läs igenom koden och starta klienten medan väderstationerna är igång
 Implementera funktionen MultiGet
@@ -29,7 +29,9 @@ func main() {
 
 	for {
 		before := time.Now()
+		// Raden nedan är endast för att du kan testa Get-funktionen. Kommentera bort den när du är klar
 		res := Get(server[0], client)
+		// Denna rad ska kommenteras bort när du är redo att köra funktionen MultiGet
 		//res := MultiGet(server, client)
 		after := time.Now()
 		fmt.Println("Response:", res)

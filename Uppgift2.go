@@ -2,8 +2,8 @@
 // Datum
 
 /*
-Slutför funktionen Add. Indata är en array med siffror och summan av siffrorna ska skickas till kanalen.
-I main-funktionen ska resultatet från kanalen ch skrivas ut.
+Slutför funktionen Add. Indata är en slice med integers och summan av siffrorna ska skickas till kanalen.
+I main-funktionen ska resultatet från kanalen skrivas ut.
 */
 
 package main

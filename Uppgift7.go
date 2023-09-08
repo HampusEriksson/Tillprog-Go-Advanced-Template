@@ -7,7 +7,8 @@ Använd idéerna från exemplet med effektiv parallell beräkning.
 
 Du kan också göra ändringar i programmet, till exempel använda olika funktioner och andra färgsättningar.
 
-Hur många processorer (CPUs) använder ditt program? Hur mycket snabbare är din parallella version?
+Hur många processorer (CPUs) använder ditt program?
+Hur mycket snabbare är din parallella version? Tiden mäts i main-funktionen. Det ska gå att i alla fall halvera körstiden.
 */
 package main
 
@@ -19,6 +20,7 @@ import (
 	"math/cmplx"
 	"os"
 	"strconv"
+	"time"
 )
 
 type ComplexFunc func(complex128) complex128
@@ -35,12 +37,18 @@ var Funcs []ComplexFunc = []ComplexFunc{
 }
 
 func main() {
+	startTime := time.Now() // Record the start time
+
 	for n, fn := range Funcs {
 		err := CreatePng("picture-"+strconv.Itoa(n)+".png", fn, 1024)
 		if err != nil {
 			log.Fatal(err)
 		}
 	}
+
+	// Calculate and print the elapsed time
+	elapsedTime := time.Since(startTime)
+	log.Printf("Program execution time: %s", elapsedTime)
 }
 
 // CreatePng creates a PNG picture file with a Julia image of size n x n.

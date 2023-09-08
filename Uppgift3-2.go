@@ -1,6 +1,9 @@
 // Namn
 // Datum
-/*Förklara vad som är fel i programmet nedan.
+/*
+Programmet nedan ska printa ut alla tal mellan 1 till 11.
+Ibland så gör progrmamet detta korrekt, men ibland skriver den bara ut 1 till 10.
+Förklara vad som är fel i programmet nedan.
 Skriv detta som kommentarer i din kod.
 Fixa sedan så att all data passerar genom kanalerna och printas ut som avsett.
 */

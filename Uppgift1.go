@@ -11,6 +11,8 @@ Skriv nu main-funktionen så att den producerar följande utskrifter:
 - Var 8e timme: Klockan är XX.XX: Dags att arbeta
 - Var 24e timme: Klockan är XX.XX: Dags att sova
 
+Du kommer behöva en go-rutin för varje påminnelse.
+
 Tips: Testa med sekund istället för timme.
 
 För att få nuvarande tid kan du kolla in: https://golang.org/pkg/time/
@@ -27,6 +29,5 @@ func Remind(text string, delay time.Duration) {
 func main() {
 
 	// För att förhindra programmet att stängas av kan du göra en tom select
-
 	select {}
 }

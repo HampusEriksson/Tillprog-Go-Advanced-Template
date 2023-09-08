@@ -1,7 +1,7 @@
 // Namn
 // Datum
 /*
-Detta program innehåller fyra produceras som tillsammans skickar 32 strängar över en kanal.
+Detta program innehåller fyra producers som tillsammans skickar 32 strängar över en kanal.
 I andra änden finns två consumers som tar emot strängarna.
 Beskriv vad som händer, och förklara varför det händer, om du gör följande ändringar i programmet.
 Försök först resonera dig fram, och testa sedan din hypotes genom att ändra och köra programmet.
@@ -30,14 +30,11 @@ import (
 )
 
 func main() {
-	// Use different random numbers each time this program is executed.
-	rand.Seed(time.Now().Unix())
 
 	const strings = 32
 	const producers = 4
 	const consumers = 2
 
-	before := time.Now()
 	ch := make(chan string)
 	wgp := new(sync.WaitGroup)
 	wgp.Add(producers)
@@ -49,7 +46,6 @@ func main() {
 	}
 	wgp.Wait() // Wait for all producers to finish.
 	close(ch)
-	fmt.Println("time:", time.Now().Sub(before))
 }
 
 // Produce sends n different strings on the channel and notifies wg when done.
