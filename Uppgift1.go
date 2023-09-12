@@ -13,7 +13,7 @@ Skriv nu main-funktionen så att den producerar följande utskrifter:
 
 Du kommer behöva en go-rutin för varje påminnelse.
 
-Tips: Testa med sekund istället för timme.
+Tips: Testa med sekund istället för timme när du testar programmet.
 
 För att få nuvarande tid kan du kolla in: https://golang.org/pkg/time/
 */

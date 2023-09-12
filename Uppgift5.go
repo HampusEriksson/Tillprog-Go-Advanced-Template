@@ -2,12 +2,12 @@
 // Datum
 /*
 Detta program innehåller en översikt för ett program som kommer att besvara 'frågor'.
-Komplettera Oracle-funktionen. Du ska inte ändra huvudfunktionen eller andra funktioner.
+Komplettera Oracle-funktionen. DU SKA INTE ÄNDRA HUVUDFUNKTIONEN ELLER ANDRA FUNKTIONER.
 Observera att svar inte ska visas omedelbart; istället bör det finnas en fördröjning eller paus för eftertanke.
 Dessutom kommer Oracle fortfarande att skriva ut hjälpsamma förutsägelser även om det inte finns några frågor.
-Du kan strukturera din lösning i flera funktioner.
+Du får strukturera din lösning i flera funktioner, men det behövs ej.
 
-Ditt program bör innehålla två kanaler: En kanal för frågor och en för svar och förutsägelser. I Oracle-funktionen bör du starta tre obestämda go-rutiner.
+Ditt program bör innehålla två kanaler: En kanal för frågor och en för svar och förutsägelser. I Oracle-funktionen bör du starta tre go-rutiner.
 
 En go-rutin som tar emot alla frågor och för varje inkommande fråga skapar en separat go-rutin som svarar på den frågan
 En go-rutin som genererar förutsägelser
