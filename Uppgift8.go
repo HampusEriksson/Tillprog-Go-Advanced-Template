@@ -6,6 +6,8 @@ Förfrågan ska också avslutas om ingen har svarat inom en given tid (t.ex. 15 
 
 Läs igenom koden och starta klienten medan väderstationerna är igång
 Implementera funktionen MultiGet
+
+För att uppgiften ska fungera måste du först starta filen server.go
 */
 package main
 
